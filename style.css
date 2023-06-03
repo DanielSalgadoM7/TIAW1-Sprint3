@@ -1,0 +1,35 @@
+body{
+    background-image : url(../funcionapfvr.gif);
+    }
+    .col-xs-6
+    {
+        color: #f02424;
+    }
+
+    .col-sm-4
+    {
+        color: white;
+    }
+
+    .list-group
+    {
+        color: black;
+    }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
