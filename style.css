@@ -33,3 +33,23 @@ body {
 footer {
   flex-shrink: 0;
 }
+
+.container-geral {
+  float: left;
+  padding: 20px;
+  margin-top: 20px; /*espaço entre o container e cabeçalho*/
+  margin-bottom: 20px; /*espaço entre o container e rodapé*/
+  margin-left: 150px;
+  background-color: #852323;
+  width: 400px; /* Defina a largura do contêiner conforme necessário */
+  height: 550px; /* Defina a altura do contêiner conforme necessário */
+  overflow: hidden; 
+}
+
+.container-perfil{
+  width: 100%; /* Defina a largura do contêiner conforme necessário */
+  height: 100%; /* Defina a altura do contêiner conforme necessário */
+  overflow: hidden; 
+  background-color: rgb(192, 137, 137);
+  
+}
