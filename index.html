@@ -89,7 +89,7 @@
                                     <label for="login">
                                         <h4>Login</h4>
                                     </label>
-                                    <input type="text" class="form-control" name="login" id="Login" placeholder="Digite seu login">
+                                    <input type="text" class="form-control" id="Login" placeholder="Digite seu login" onkeyup="imprimirValor()">
                                 </div>
                             </div>
                           
@@ -99,7 +99,7 @@
                                     <label for="nome">
                                         <h4>Nome</h4>
                                     </label>
-                                    <input type="text" class="form-control" name="Nome" id="Nome" placeholder="Digite seu nome">
+                                    <input type="text" class="form-control" id="Nome" placeholder="Digite seu nome" onkeyup="imprimirValor()">
                                 </div>
                             </div>
                          
@@ -109,7 +109,7 @@
                                     <label for="email">
                                         <h4>E-mail</h4>
                                     </label>
-                                    <input type="text" class="form-control" name="email" id="Email" placeholder="sprint3@gmail.com">
+                                    <input type="text" class="form-control" id="Email" placeholder="sprint3@gmail.com" required oninput="validarTexto(event)" onkeyup="imprimirValor()">
                                 </div>
                             </div>
 
@@ -119,7 +119,7 @@
                                     <label for="data">
                                         <h4>Data de nascimento</h4>
                                     </label>
-                                    <input type="text" class="form-control" name="data" id="data" placeholder="DD/MM/YYYY">
+                                    <input type="date" class="form-control" id="Data" placeholder="DD/MM/YYYY" onkeyup="imprimirValor()">
                                 </div>
                             </div>
 
@@ -129,7 +129,7 @@
                                     <label for="email">
                                         <h4>Cidade</h4>
                                     </label>
-                                    <input type="text" class="form-control" name="cidade" id="Cidade" placeholder="Digite sua cidade">
+                                    <input type="text" class="form-control" id="Cidade" placeholder="Digite sua cidade" onkeyup="imprimirValor()">
                                 </div>
                             </div>
 
@@ -139,15 +139,26 @@
                                     <label for="cidade">
                                         <h4>Telefone</h4>
                                     </label>
-                                    <input type="text" class="form-control" name="telefone" id="Telefone" placeholder="(**) ****-****">
+                                    <input type="text" class="form-control" id="Telefone" placeholder="(**) ****-****" oninput="validarNumero(event)" onkeyup="imprimirValor()">
                                 </div>
                             </div>
                           
                             <div class="form-group">
                               <br>
+                                <div class="col-xs-6">
+                                    <label for="cidade">
+                                        <h4>Telefone</h4>
+                                    </label>
+                                    <input type="text" class="form-control" id="Telefone2" placeholder="(**) ****-****" oninput="validarNumero(event)" onkeyup="imprimirValor()">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                              <br>
                                 <div class="col-xs-12">
                                     <br>
-                                    <button class="btn btn-success" type="submit"> <i class="glyphicon glyphicon-ok-sign"> </i> Salvar </button>
+                                    <button id="btn-salvar" class="btn btn-success" type="submit"> <i class="glyphicon glyphicon-ok-sign"> </i> Salvar </button>
+                                    
+                                    <button id="btn-editar" class="btn btn-danger" type="submit"> <i class="glyphicon glyphicon-ok-sign"> </i> Editar </button>
                                 </div>
                             </div>
                           </form>
@@ -178,6 +189,8 @@
 
 <!--chamada dos script-->
 <script src="script.js"></script>
+<script src="testescript.js"></script>
+<script src="imprimir.js"></script>
 <!--fim do script-->
 </body>
 
