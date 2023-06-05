@@ -1,3 +1,4 @@
+//caracteriza a forma de ler os dados
 function le_Usuarios() {
     let strUsuarios = localStorage.getItem('db');
     let objUsuarios = {};
@@ -14,7 +15,8 @@ function le_Usuarios() {
     return objUsuarios;
 }
 
-function imprime_Usuarios() {
+//imprime os dados
+function imprime_Informacao() {
     let tela = document.getElementById('tela');
     let strHtml = '<p>ID | Login | Nome | Email | Data de Nascimento | Cidade | Telefone</p>';
     let objUsuarios = le_Usuarios();
@@ -31,4 +33,10 @@ function imprime_Usuarios() {
 
     tela.innerHTML = strHtml;
 }
-document.getElementById('btn-imprimir').addEventListener('click', imprime_Usuarios);
+
+//exclui os dados
+function exclui_Informacao(){
+    localStorage.clear();
+}
+document.getElementById('btn-imprimir').addEventListener('click', imprime_Informacao);
+document.getElementById('btn-excluir').addEventListener('click', exclui_Informacao);
