@@ -1,3 +1,27 @@
+//fazer o telefone ser apenas com números
+function validarNumero(event) {
+    var input = event.target;
+    var value = input.value;
+    var validNumber = /^\d+$/.test(value);
+    
+    if (!validNumber) {
+        input.value = value.replace(/\D/g, '');
+    }
+}
+
+//fazer o @ obrigatório no email
+function validarTexto(event) {
+    var input = event.target;
+    var value = input.value;
+    var validText = /@/.test(value);
+    
+    if (!validText) {
+        input.setCustomValidity("Digite um texto que contenha o símbolo '@'");
+    } else {
+        input.setCustomValidity("");
+    }
+}
+
 //pegar imagem dos arquivos
 $(document).ready(function () {
     var readURL = function (input) {
@@ -50,58 +74,16 @@ function le_Informacao() {
     } else {
         objUsuarios = {
             usuarios: [
-                { id: 0, Login: "Jorge1", Nome: "Jorge", Email: "jorge@email.com", Data: "23/03/2002", Cidade: "Belo Horizonte", Telefone: "31 1111-1111", logado: true }
+                { id: 0, Login: "Teste", Nome: "Tester", Email: "tester@gmail.com", Data: "02/06/2023", Cidade: "Belo Horizonte", Telefone: "31 1111-1111", logado: true }
             ]
         };
     }
     return objUsuarios;
 }
 
-//mostra as informações
-function imprime_Informacao() {
-    let tela = document.getElementById('tela');
-    let strHtml = '<p>ID | Login | Nome | Email | Data de Nascimento | Cidade | Telefone</p>';
-    let objUsuarios = le_Usuarios();
-
-    for (let i = 0; i < objUsuarios.usuarios.length; i++) {
-        strHtml += `<p>${objUsuarios.usuarios[i].Login}</p>
-        <p>${objUsuarios.usuarios[i].Nome}</p>
-        <p>${objUsuarios.usuarios[i].Email}</p>
-        <p>${objUsuarios.usuarios[i].Data} </p>
-        <p>${objUsuarios.usuarios[i].Cidade}</p>
-        <p>${objUsuarios.usuarios[i].Telefone}</p>`
-}
-
-tela.innerHTML = strHtml;
-}
-
-//fazer o telefone ser apenas com números
-function validarNumero(event) {
-    var input = event.target;
-    var value = input.value;
-    var validNumber = /^\d+$/.test(value);
-    
-    if (!validNumber) {
-        input.value = value.replace(/\D/g, '');
-    }
-}
-
-//fazer o @ obrigatório no email
-function validarTexto(event) {
-    var input = event.target;
-    var value = input.value;
-    var validText = /@/.test(value);
-    
-    if (!validText) {
-        input.setCustomValidity("Digite um texto que contenha o símbolo '@'");
-    } else {
-        input.setCustomValidity("");
-    }
-}
-
 //botão de confirmar
 document.getElementById('btn-salvar').addEventListener('click', cadastra_Informacao);
-document.getElementById('btn-salvar').addEventListener('click', imprime_Informacao);
 document.getElementById('btn-salvar').addEventListener('click', function (e) {
     e.preventDefault();
 });
+
