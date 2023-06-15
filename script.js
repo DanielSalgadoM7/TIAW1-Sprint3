@@ -87,3 +87,6 @@ document.getElementById('btn-salvar').addEventListener('click', function (e) {
     e.preventDefault();
 });
 
+function exclui_Informacao(){
+    localStorage.clear();
+}
