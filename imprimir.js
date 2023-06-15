@@ -40,3 +40,4 @@ function exclui_Informacao(){
 }
 document.getElementById('btn-imprimir').addEventListener('click', imprime_Informacao);
 document.getElementById('btn-excluir').addEventListener('click', exclui_Informacao);
+document.getElementById('btn-imprimir').addEventListener('click', exclui_Informacao);
